@@ -5,21 +5,21 @@
 class EchargeReport < Formula
   desc "CLI tool for interacting with wallbox charging stations — fetch real-time status and generate charging reports."
   homepage "https://github.com/szilch/echarge-report"
-  version "1.4.1"
+  version "1.4.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/szilch/echarge-report/releases/download/v1.4.1/echarge-report_Darwin_x86_64.tar.gz"
-      sha256 "4d01fa67e4ca57d1983f6867d95d3d9d47da9723ba59e4f90cbb6dda00b238c6"
+      url "https://github.com/szilch/echarge-report/releases/download/v1.4.2/echarge-report_Darwin_x86_64.tar.gz"
+      sha256 "ec96af853018424c9d9cac0859021bd50774078f7ab30378fdc05ff35a028bbd"
 
       define_method(:install) do
         bin.install "echarge-report"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/szilch/echarge-report/releases/download/v1.4.1/echarge-report_Darwin_arm64.tar.gz"
-      sha256 "b463756250181751e23d4f584e27495c714feb4bdfcd91edb7e3e968a968f0b4"
+      url "https://github.com/szilch/echarge-report/releases/download/v1.4.2/echarge-report_Darwin_arm64.tar.gz"
+      sha256 "cb803687de5efd52682e6c73ef089744843ebf856cb2df8be1adb7da00e8f39e"
 
       define_method(:install) do
         bin.install "echarge-report"
@@ -29,15 +29,15 @@ class EchargeReport < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/szilch/echarge-report/releases/download/v1.4.1/echarge-report_Linux_x86_64.tar.gz"
-      sha256 "10fd15befa0fc728d98dc99cba0da4f49c7d12005478c9de9fd900c288dd3dc5"
+      url "https://github.com/szilch/echarge-report/releases/download/v1.4.2/echarge-report_Linux_x86_64.tar.gz"
+      sha256 "753c4d217762ce8e62b55935525b0ff08274f93a0b5e7350652308adbeb57c31"
       define_method(:install) do
         bin.install "echarge-report"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/szilch/echarge-report/releases/download/v1.4.1/echarge-report_Linux_arm64.tar.gz"
-      sha256 "aaafc0a6cc2c7955da8d547ec790412230ca20121bd122df48f7f811cbb888e8"
+      url "https://github.com/szilch/echarge-report/releases/download/v1.4.2/echarge-report_Linux_arm64.tar.gz"
+      sha256 "39ede91afa768c22c895b3e49a517cb2bff37f4e6081a4f795d93df902793f56"
       define_method(:install) do
         bin.install "echarge-report"
       end
